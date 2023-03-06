@@ -1,0 +1,33 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   </head>
+   <body>
+    <h1>Cislo v radcich</h1>
+	<label for="cislo">Zadejte cislo:</label>
+	<input type="text" id="cislo">
+	<button onclick="vypisCislo()">Vypisat</button>
+	<p id="vysledek"></p>
+	<script>
+		function vypisCislo() {
+			let cislo = document.getElementById("cislo").value;
+			let delka = cislo.length;
+			let vysledek = "";
+			for (let i = 0; i < delka; i++) {
+				vysledek += cislo.slice(0, delka - i) + "<br>";
+			}
+			document.getElementById("vysledek").innerHTML = vysledek;
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+   </body>
+   </html>
